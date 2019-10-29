@@ -14,7 +14,7 @@ fi
 
 if [ -n "$EXTRA_REPOS" ] ; then
     for repo in $EXTRA_REPOS; do 
-        REPONAME=$(echo "$repo" | cut -d "/" -f 4- | sed s,/,_,g | sed s,_$,,)
+        REPONAME=$(echo $repo | sed s,\",,g | cut -d "/" -f 4- | sed s,/,_,g | sed s,_$,,)
 
 cat > /etc/yum.repos.d/$REPONAME.repo << EOF
 [$REPONAME]
