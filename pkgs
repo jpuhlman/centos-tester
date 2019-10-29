@@ -7,6 +7,7 @@ apr
 apr-util
 apr-util-ldap
 at
+atk
 attr
 audit
 audit-libs
@@ -81,6 +82,7 @@ dbus-glib
 dbus-libs
 dbus-python
 dejavu-fonts-common
+dejavu-sans-fonts
 dejavu-sans-mono-fonts
 deltarpm
 device-mapper
@@ -130,6 +132,7 @@ fltk
 fontconfig
 fontpackages-filesystem
 freetype
+fribidi
 gamin
 gawk
 gcc
@@ -137,6 +140,7 @@ gcc-c++
 gdb
 gdbm
 gdbm-devel
+gdk-pixbuf2
 genisoimage
 GeoIP
 gettext
@@ -158,6 +162,7 @@ gnutls-utils
 gobject-introspection
 gpgme
 gpm-libs
+graphite2
 grep
 groff
 groff-base
@@ -170,9 +175,11 @@ grub2-tools-extra
 grub2-tools-minimal
 grubby
 gsettings-desktop-schemas
+gtk2
+gtk-update-icon-cache
 gzip
 hardlink
-heat-cfntools
+harfbuzz
 hesiod
 hicolor-icon-theme
 hostname
@@ -193,6 +200,7 @@ iscsi-initiator-utils
 iscsi-initiator-utils-iscsiuio
 isomd5sum
 jansson
+jasper-libs
 java-1.8.0-openjdk
 java-1.8.0-openjdk-headless
 javapackages-tools
@@ -249,6 +257,9 @@ libfontenc
 libgcc
 libgcrypt
 libgcrypt-devel
+libglvnd
+libglvnd-egl
+libglvnd-glx
 libgnome-keyring
 libgomp
 libgpg-error
@@ -291,6 +302,7 @@ libsemanage-python
 libsepol
 libsepol-devel
 libSM
+libsmartcols
 libsmbclient
 libsmi
 libss
@@ -302,6 +314,7 @@ libtalloc
 libtasn1
 libtdb
 libtevent
+libthai
 libtiff
 libtirpc
 libunistring
@@ -429,6 +442,7 @@ os-prober
 p11-kit
 p11-kit-trust
 pam
+pango
 parted
 passwd
 patch
@@ -436,6 +450,7 @@ pciutils
 pciutils-libs
 pcre
 pcre-devel
+pcsc-lite-libs
 perf
 perl
 perl-Archive-Extract
@@ -624,18 +639,18 @@ pygobject2
 pygpgme
 pykickstart
 pyliblzma
-pyOpenSSL
-pyparsing
 pyserial
 pytalloc
 python
 python2-asn1crypto
 python2-cffi
+python2-crypto
 python2-cryptography
+python2-futures
 python2-idna
 python2-jmespath
-python2-psutil
 python2-pyasn1
+python2-pyOpenSSL
 python2-pyparsing
 python2-pysocks
 python2-rsa
@@ -644,11 +659,9 @@ python-babel
 python-backports
 python-backports-ssl_match_hostname
 python-boto
-python-cffi
 python-chardet
 python-cheetah
 python-configobj
-python-crypto
 python-dateutil
 python-decorator
 python-deltarpm

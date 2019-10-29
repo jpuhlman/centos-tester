@@ -1,28 +1,32 @@
 #Base repo end
-[openstack-queens-7.5]
-name=openstack-queens-7.5
-baseurl=http://vault.centos.org/7.5.1804/cloud/x86_64/openstack-queens/
+[openstack-rocky-7.6]
+name=openstack-rocky-7.6
+baseurl=http://vault.centos.org/7.6.1810/cloud/x86_64/openstack-rocky/
+#srcurl=http://vault.centos.org/7.6.1810/cloud/Source/openstack-rocky/
 gpgcheck=0
 cost=2000
 enabled=1
 
-[opstools-7.5.1804]
-name=opstools-7.5.1804
-baseurl=http://vault.centos.org/7.5.1804/opstools/x86_64
+[opstools-7.6.1810]
+name=opstools-7.6.1810
+baseurl=http://vault.centos.org/7.6.1810/opstools/x86_64
+#srcurl=http://vault.centos.org/7.6.1810/opstools/Source/
 gpgcheck=0
 cost=2000
 enabled=1
 
-[storage-ceph-luminous-7.5.1804]
-name=storage-ceph-luminous-7.5.1804
-baseurl=http://vault.centos.org/7.5.1804/storage/x86_64/ceph-luminous
+[storage-ceph-luminous-7.6.1810]
+name=storage-ceph-luminous-7.6.1810
+baseurl=http://vault.centos.org/7.6.1810/storage/x86_64/ceph-luminous
+#srcurl=http://vault.centos.org/7.6.1810/storage/Source/ceph-luminous/
 gpgcheck=0
 cost=2000
 enabled=1
 
-[storage-gluster-3.12-7.5.1804]
-name=storage-gluster-3.12-7.5.1804
-baseurl=http://vault.centos.org/7.5.1804/storage/x86_64/gluster-3.12
+[storage-gluster-3.12-7.6.1810]
+name=storage-gluster-3.12-7.6.1810
+baseurl=http://vault.centos.org/7.6.1810/storage/x86_64/gluster-3.12
+#srcurl=http://vault.centos.org/7.6.1810/storage/Source/ceph-luminous/
 gpgcheck=0
 cost=2000
 enabled=1

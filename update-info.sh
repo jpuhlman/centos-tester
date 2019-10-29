@@ -1,5 +1,5 @@
 #!/bin/bash
-RELEASE=c7-5-mv
+RELEASE=c7-6-mv
 COMMON=git://gitcentos.mvista.com/centos/upstream/utils/common-build
 REPO=$(basename $COMMON)
 if [ ! -e $(basename $REPO) ] ; then
