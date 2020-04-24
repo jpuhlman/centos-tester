@@ -1,11 +1,11 @@
-FROM centos:7.7.1908
-COPY switch-to-vault.sh /
+FROM centos:8.1.1911
+#COPY switch-to-vault.sh /
 RUN touch /etc/yum.repos.d/local.repo
-RUN chmod 755 /switch-to-vault.sh; /switch-to-vault.sh; rm -f /switch-to-vault.sh
-COPY sig.repo /etc/yum.repos.d/sig.repo
-COPY app.list /
-RUN  yum install -y $(cat /app.list); rm -f /app.list
-RUN yum update -y 
+#RUN chmod 755 /switch-to-vault.sh; /switch-to-vault.sh; rm -f /switch-to-vault.sh
+#COPY sig.repo /etc/yum.repos.d/sig.repo
+#COPY app.list /
+#RUN  yum install -y $(cat /app.list); rm -f /app.list
+#RUN yum update -y 
 COPY init.sh /
 RUN chmod 755 /init.sh
 CMD /init.sh
