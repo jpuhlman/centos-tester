@@ -1,51 +1,51 @@
 #Base repos
 
 
-[centos-7.7.1908-base]
-name=centos-7.7.1908-base
-baseurl=http://mirror.centos.org/centos/7.7.1908/os/x86_64/
-#srcurl=http://vault.centos.org/7.7.1908/os/Source/
+[centos-7.8.2003-base]
+name=centos-7.8.2003-base
+baseurl=http://mirror.centos.org/centos/7.8.2003/os/x86_64/
+#srcurl=http://vault.centos.org/7.8.2003/os/Source/
 gpgcheck=0
 cost=2000
 enabled=1
 
-[centos-7.7.1908-extras]
+[centos-7.8.2003-extras]
 keepcache=0
-name=centos-7.7.1908-extras
-baseurl=http://mirror.centos.org/centos/7.7.1908/extras/x86_64/
-#srcurl=http://vault.centos.org/7.7.1908/extras/Source/
+name=centos-7.8.2003-extras
+baseurl=http://mirror.centos.org/centos/7.8.2003/extras/x86_64/
+#srcurl=http://vault.centos.org/7.8.2003/extras/Source/
 gpgcheck=0
 cost=2000
 enabled=1
 
-[centos-7.7.1908-updates]
-name=centos-7.7.1908-updates
-baseurl=http://mirror.centos.org/centos/7.7.1908/updates/x86_64/
-#srcurl=http://vault.centos.org/7.7.1908/updates/Source/
+[centos-7.8.2003-updates]
+name=centos-7.8.2003-updates
+baseurl=http://mirror.centos.org/centos/7.8.2003/updates/x86_64/
+#srcurl=http://vault.centos.org/7.8.2003/updates/Source/
 gpgcheck=0
 cost=2000
 enabled=1
 
-[openstack-stein-7.7]
-name=openstack-stein-7.7
-baseurl=http://mirror.centos.org/centos/7.7.1908/cloud/x86_64/openstack-stein/
-#srcurl=http://vault.centos.org/7.7.1908/cloud/Source/openstack-stein/
+[openstack-train-7.8]
+name=openstack-stein-7.8
+baseurl=http://mirror.centos.org/centos/7.8.2003/cloud/x86_64/openstack-train/
+#srcurl=http://vault.centos.org/7.8.2003/cloud/Source/openstack-train/
 gpgcheck=0
 cost=2000
 enabled=1
 
-[opstools-7.7.1908]
-name=opstools-7.7.1908
-baseurl=http://mirror.centos.org/centos/7.7.1908/opstools/x86_64
-#srcurl=http://vault.centos.org/7.7.1908/opstools/Source/
+[opstools-7.8.2003]
+name=opstools-7.8.2003
+baseurl=http://mirror.centos.org/centos/7.8.2003/opstools/x86_64
+#srcurl=http://vault.centos.org/7.8.2003/opstools/Source/
 gpgcheck=0
 cost=2000
 enabled=1
 
-[storage-ceph-luminous-7.7.1908]
-name=storage-ceph-luminous-7.7.1908
-baseurl=http://mirror.centos.org/centos/7.7.1908/storage/x86_64/ceph-luminous
-#srcurl=http://vault.centos.org/7.7.1908/storage/Source/ceph-luminous/
+[storage-ceph-luminous-7.8.2003]
+name=storage-ceph-luminous-7.8.2003
+baseurl=http://mirror.centos.org/centos/7.8.2003/storage/x86_64/ceph-luminous
+#srcurl=http://vault.centos.org/7.8.2003/storage/Source/ceph-luminous/
 gpgcheck=0
 cost=2000
 enabled=1

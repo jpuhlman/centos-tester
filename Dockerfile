@@ -1,4 +1,4 @@
-FROM centos:7.7.1908
+FROM centos:7.8.2003
 COPY switch-to-vault.sh /
 RUN touch /etc/yum.repos.d/local.repo
 RUN chmod 755 /switch-to-vault.sh; /switch-to-vault.sh; rm -f /switch-to-vault.sh

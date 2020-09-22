@@ -1,6 +1,6 @@
 #!/bin/bash
-RELEASE=c7-7-mv
-COMMON=http://gitcentos.mvista.com/cgit/common-build.git/plain/
+RELEASE=c7-8-mv
+COMMON=http://gitcentos.mvista.com/cgit/upstream/utils/common-build.git/plain
 
 curl -s $COMMON/conf/centos-updates.cfg?h=$RELEASE | sed /#Base/,/#End/p -n  | sed /^baseurl=/d | sed s,^#baseurl=,baseurl=, > sig.repo
 
