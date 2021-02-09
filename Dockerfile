@@ -1,13 +1,21 @@
-FROM centos:8.2.2004
-RUN echo 8.2.2004 > /etc/yum/vars/releasever
-RUN echo "" > /etc/yum/vars/contentdir
-RUN ls /etc/yum.repos.d/
-RUN for each in $(ls /etc/yum.repos.d); do \
-    cat /etc/yum.repos.d/$each; \
-    sed -i  /etc/yum.repos.d/$each -e "s,#baseurl=http://mirror.centos.org,baseurl=http://vault.centos.org,"; \
-    sed -i  /etc/yum.repos.d/$each -e "/^mirrorlist=/d"; \
-    cat /etc/yum.repos.d/$each; \
-    done
+FROM centos:8.3.2011
+RUN echo 8.3.2011 > /etc/yum/vars/releasever
+RUN if [ -n "$(curl https://vault.centos.org/centos/8.3.2011/AppStream/x86_64/os/repodata/repomd.xml | grep xml)" ] ; then \
+      for each in $(ls /etc/yum.repos.d); do \
+        cat /etc/yum.repos.d/$each; \
+        sed -i  /etc/yum.repos.d/$each -e "s,#baseurl=http://mirror.centos.org,baseurl=http://vault.centos.org,"; \
+        sed -i  /etc/yum.repos.d/$each -e "/^mirrorlist=/d"; \
+        cat /etc/yum.repos.d/$each; \
+      done; \
+    fi
+RUN if [ -z "$(curl https://vault.centos.org/centos/8.3.2011/AppStream/x86_64/os/repodata/repomd.xml | grep xml)" ] ; then \
+      for each in $(ls /etc/yum.repos.d); do \
+        cat /etc/yum.repos.d/$each; \
+        sed -i  /etc/yum.repos.d/$each -e "s,#baseurl=,baseurl=,"; \
+        sed -i  /etc/yum.repos.d/$each -e "/^mirrorlist=/d"; \
+        cat /etc/yum.repos.d/$each; \
+      done; \
+    fi
 RUN dnf update -y
 COPY init.sh /
 RUN chmod 755 /init.sh
