@@ -33,7 +33,9 @@ enabled=1
 gpgcheck=0
 baseurl=$repo
 EOF
-
+pushd $repo
+createrepo .
+popd
     done
 fi
 if [ -n "$SYSTEMD" ] ; then
