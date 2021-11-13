@@ -34,7 +34,9 @@ gpgcheck=0
 baseurl=$repo
 EOF
 pushd $repo
+rm -rf repodata
 createrepo .
+chmod -R 777 repodata
 popd
     done
 fi
