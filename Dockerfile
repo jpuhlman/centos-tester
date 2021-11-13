@@ -1,5 +1,5 @@
 FROM jpuhlman/centos-base:5.11
-RUN yum install -y createrepo
+RUN yum install -y createrepo bzip2-libs
 COPY init.sh /
 RUN chmod 755 /init.sh
 CMD /init.sh
