@@ -1,6 +1,6 @@
-FROM centos:8.3.2011
-RUN echo 8.3.2011 > /etc/yum/vars/releasever
-RUN if [ -n "$(curl https://vault.centos.org/centos/8.3.2011/AppStream/x86_64/os/repodata/repomd.xml | grep xml)" ] ; then \
+FROM centos:8.4.2105
+RUN echo 8.4.2105 > /etc/yum/vars/releasever
+RUN if [ -n "$(curl https://vault.centos.org/centos/8.4.2105/AppStream/x86_64/os/repodata/repomd.xml | grep xml)" ] ; then \
       for each in $(ls /etc/yum.repos.d); do \
         cat /etc/yum.repos.d/$each; \
         sed -i  /etc/yum.repos.d/$each -e "s,#baseurl=http://mirror.centos.org,baseurl=http://vault.centos.org,"; \
@@ -8,7 +8,7 @@ RUN if [ -n "$(curl https://vault.centos.org/centos/8.3.2011/AppStream/x86_64/os
         cat /etc/yum.repos.d/$each; \
       done; \
     fi
-RUN if [ -z "$(curl https://vault.centos.org/centos/8.3.2011/AppStream/x86_64/os/repodata/repomd.xml | grep xml)" ] ; then \
+RUN if [ -z "$(curl https://vault.centos.org/centos/8.4.2105/AppStream/x86_64/os/repodata/repomd.xml | grep xml)" ] ; then \
       for each in $(ls /etc/yum.repos.d); do \
         cat /etc/yum.repos.d/$each; \
         sed -i  /etc/yum.repos.d/$each -e "s,#baseurl=,baseurl=,"; \
