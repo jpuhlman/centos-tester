@@ -38,7 +38,7 @@ EOF
 fi
 if [ -e /run.sh ] ; then
    chmod 755 /run.sh
-   /run.sh
+   exec /run.sh
 elif [ -n "$SYSTEMD" ] ; then
     exec /sbin/init
 else
