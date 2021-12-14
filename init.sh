@@ -40,7 +40,11 @@ chmod -R 777 repodata
 popd
     done
 fi
-if [ -n "$SYSTEMD" ] ; then
+
+if [ -e /run.sh ] ; then
+   chmod 755 /run.sh
+   exec /run.sh
+elif [ -n "$SYSTEMD" ] ; then
     exec /sbin/init
 else
     exec /bin/bash
