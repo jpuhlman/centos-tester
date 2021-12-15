@@ -4,6 +4,10 @@ RUN touch /etc/yum.repos.d/local.repo
 RUN chmod 755 /switch-to-vault.sh; /switch-to-vault.sh; rm -f /switch-to-vault.sh
 COPY sig.repo /etc/yum.repos.d/sig.repo
 COPY app.list /
+RUN sed -i /etc/yum.repos.d/CentOS-Base.repo \
+    -e "s,#baseurl,baseurl," \
+    -e "s,mirrorlist,#mirrorlist," \
+    -e "s,mirror.centos.org,vault.centos.org,"
 RUN  yum install -y $(cat /app.list); rm -f /app.list
 RUN yum update -y 
 COPY init.sh /
