@@ -1,4 +1,8 @@
 FROM centos:6.10
+RUN sed -i /etc/yum.repos.d/CentOS-Base.repo \
+    -e "s,#baseurl,baseurl," \
+    -e "s,mirrorlist,#mirrorlist," \
+    -e "s,mirror.centos.org,vault.centos.org,"
 COPY switch-to-vault.sh /
 RUN touch /etc/yum.repos.d/local.repo
 RUN chmod 755 /switch-to-vault.sh; /switch-to-vault.sh; rm -f /switch-to-vault.sh
