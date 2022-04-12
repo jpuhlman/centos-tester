@@ -16,6 +16,7 @@ name=Local repo $REPONAME
 failovermethod=priority
 enabled=1
 gpgcheck=0
+module_hotfixes=true
 baseurl=file://$repo
 EOF
     done
@@ -32,6 +33,7 @@ failovermethod=priority
 enabled=1
 gpgcheck=0
 baseurl=$repo
+module_hotfixes=true
 EOF
 
     done
